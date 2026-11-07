@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Recipe card box</title>
+  <desc id="desc">Illustration of a wooden box holding recipe cards.</desc>
+  <rect width="800" height="520" rx="28" fill="#f6e6d0"/>
+  <rect y="330" width="800" height="190" fill="#e7c79a"/>
+  <ellipse cx="400" cy="360" rx="250" ry="28" fill="#d7b184"/>
+  <path d="M230 250h340v130H230z" fill="#c4894e" stroke="#8d5a32" stroke-width="6"/>
+     <path d="M230 250l40-50h340l-40 50z" fill="#e0b07a"/>
+     <rect x="300" y="180" width="150" height="90" rx="6" fill="#fffaf3" stroke="#e4d3c0"/>
+     <path d="M316 210h118M316 230h90" stroke="#e7b8b0"/>
+</svg>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/granny-recipes/">
+  <script>document.documentElement.classList.remove("no-js");</script>
+  <title>About · Granny Recipes</title>
+  <meta name="description" content="What Granny Recipes is: a warm place to keep family-style recipes, with a shop that is opening soon.">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <link rel="canonical" href="https://jonldavis-coder.github.io/granny-recipes/about.html">
+  
+  
+</head>
+<body data-page="static">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#8d3f2a"/>
+          <ellipse cx="32" cy="40" rx="18" ry="8" fill="#f3eee4"/>
+          <path d="M18 38c2-10 8-16 14-16s12 6 14 16" fill="#f6d7a2" stroke="#6f2f1e" stroke-width="2"/>
+          <circle cx="32" cy="24" r="3" fill="#6f2f1e"/>
+        </svg>
+        <span>Granny Recipes</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary">
+          <a href="index.html">Recipes</a>
+          <a href="shop/">Shop</a>
+          <a href="post.html">Post a recipe</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="guidelines.html">Guidelines</a>
+      </nav>
+      <div id="auth-slot"></div>
+    </div>
+  </header>
+  <p id="demo-banner" class="demo-banner" role="status" hidden></p>
+  <noscript>
+    <p class="demo-banner">JavaScript is off, so posting, search, comments, hearts, and ratings are unavailable. You can still read the sample recipes and the shop notes.</p>
+  </noscript>
+  <div id="preview-bar" hidden></div>
+  <main id="content" tabindex="-1">
+    <article class="wrap prose">
+    <h1>About Granny Recipes</h1>
+    <p>Granny Recipes is a small website for recipes people want to keep: the Sunday roast, the biscuits, the pie that always came out of the same oven. It is a community cookbook, not a biography of any real person.</p>
+    <p>The recipes already on the shelf are labeled <strong>Sample recipe</strong>. They are generic home-cooking notes written for this site. They are not quotations, and they are not attributed to a named person. The pictures are simple illustrations made for the site, not photographs of real people or children.</p>
+    <h2>How saving works</h2>
+    <p>Until a Supabase project is connected, the site runs in demo mode. The banner says so: your posts are saved only in this browser. Create an account with email and password, or use the one-time sign-in link shown on the login page. Hearts, stars, and comments stay on this device too.</p>
+    <p>When <code>config.js</code> has a Supabase URL and anon key, the same screens use that shared kitchen instead. Setup steps are in the README.</p>
+    <h2>The shop</h2>
+    <p><a href="shop/">Granny's Kitchen Shop</a> is marked <strong>Opening soon</strong>. Recipe cards, a card box, a gift set, and The Granny Recipes Book are described there. Any prices you see are placeholders, not final prices, and an empty checkout slot does not take payment.</p>
+    <h2>Moderation</h2>
+    <p>Every recipe and comment has a report button. The owner can hide or delete posts and comments. In demo mode, set <code>OWNER_EMAIL</code> in <code>config.js</code>. With Supabase, add your user to <code>public.owners</code>.</p>
+  </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="shop/">Shop</a>
+        <a href="guidelines.html">Community guidelines</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <p id="mode-note"></p>
+      <p>Recipes are home cooking notes, not professional food-safety advice. Shop prices are placeholders until the shop opens.</p>
+    </div>
+  </footer>
+  <script src="config.js"></script>
+  <script src="assets/js/shop-config.js"></script>
+  <script type="module" src="assets/js/boot.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Family-style meatloaf</title>
+  <desc id="desc">Illustration of a glazed meatloaf on a platter.</desc>
+  <rect width="800" height="520" rx="28" fill="#f6e6d0"/>
+  <rect y="330" width="800" height="190" fill="#e7c79a"/>
+  <ellipse cx="400" cy="360" rx="250" ry="28" fill="#d7b184"/>
+  <ellipse cx="400" cy="320" rx="200" ry="40" fill="#fffaf3" stroke="#eadccb" stroke-width="8"/>
+     <path d="M270 300c10-70 250-70 260 0v20H270z" fill="#a24b3b"/>
+     <path d="M290 250c40 16 180 16 220 0" fill="none" stroke="#d4654a" stroke-width="10" stroke-linecap="round"/>
+     <circle cx="330" cy="270" r="6" fill="#6a8f4e"/>
+     <circle cx="470" cy="268" r="6" fill="#6a8f4e"/>
+</svg>

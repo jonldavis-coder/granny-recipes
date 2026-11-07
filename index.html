@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/granny-recipes/">
+  <script>document.documentElement.classList.remove("no-js");</script>
+  <title>Granny Recipes — favorite recipes from grandmother kitchens</title>
+  <meta name="description" content="Browse and share favorite recipes from grandmother kitchens. Sample recipes, comments, hearts, and ratings. The shop is opening soon.">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <link rel="canonical" href="https://jonldavis-coder.github.io/granny-recipes/">
+  
+  <meta property="og:title" content="Granny Recipes">
+  <meta property="og:description" content="Browse and share favorite recipes from grandmother kitchens. Sample recipes, comments, hearts, and ratings. The shop is opening soon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jonldavis-coder.github.io/granny-recipes/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Granny Recipes","url":"https://jonldavis-coder.github.io/granny-recipes/","description":"Browse and share favorite recipes from grandmother kitchens. Sample recipes, comments, hearts, and ratings. The shop is opening soon.","potentialAction":{"@type":"SearchAction","target":"https://jonldavis-coder.github.io/granny-recipes/?q={query}","query-input":"required name=query"}}</script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#8d3f2a"/>
+          <ellipse cx="32" cy="40" rx="18" ry="8" fill="#f3eee4"/>
+          <path d="M18 38c2-10 8-16 14-16s12 6 14 16" fill="#f6d7a2" stroke="#6f2f1e" stroke-width="2"/>
+          <circle cx="32" cy="24" r="3" fill="#6f2f1e"/>
+        </svg>
+        <span>Granny Recipes</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Recipes</a>
+          <a href="shop/">Shop</a>
+          <a href="post.html">Post a recipe</a>
+          <a href="about.html">About</a>
+          <a href="guidelines.html">Guidelines</a>
+      </nav>
+      <div id="auth-slot"></div>
+    </div>
+  </header>
+  <p id="demo-banner" class="demo-banner" role="status" hidden></p>
+  <noscript>
+    <p class="demo-banner">JavaScript is off, so posting, search, comments, hearts, and ratings are unavailable. You can still read the sample recipes and the shop notes.</p>
+  </noscript>
+  <div id="preview-bar" hidden></div>
+  <main id="content" tabindex="-1">
+    <div class="wrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A community cookbook</p>
+        <h1>Recipes worth keeping</h1>
+        <p class="lede">Write down the dishes you want to remember, and browse a shelf of classic, generic home recipes. Anyone can read. An account is only for posting, commenting, hearts, and stars.</p>
+      </div>
+      <img src="assets/images/hero.svg" alt="Illustration of a bowl, a pie, and a cup on a table" width="800" height="520">
+    </section>
+    <form class="filters panel" role="search" onsubmit="return false;">
+      <label class="search-label" for="search">Search recipes</label>
+      <input id="search" name="q" type="search" placeholder="Soup, apples, biscuits…" autocomplete="off">
+      <p id="category-label">Category</p>
+      <div id="category-filters" class="chip-row" role="group" aria-labelledby="category-label">
+          <button type="button" data-category="All" aria-pressed="true">All</button>
+          <button type="button" data-category="Breakfast" aria-pressed="false">Breakfast</button>
+          <button type="button" data-category="Mains" aria-pressed="false">Mains</button>
+          <button type="button" data-category="Sides" aria-pressed="false">Sides</button>
+          <button type="button" data-category="Soups" aria-pressed="false">Soups</button>
+          <button type="button" data-category="Breads" aria-pressed="false">Breads</button>
+          <button type="button" data-category="Desserts" aria-pressed="false">Desserts</button>
+          <button type="button" data-category="Holidays" aria-pressed="false">Holidays</button>
+      </div>
+      <label for="rating-filter">Minimum rating</label>
+      <select id="rating-filter">
+        <option value="0">Any rating</option>
+        <option value="3">3 stars and up</option>
+        <option value="4">4 stars and up</option>
+        <option value="5">5 stars</option>
+      </select>
+      <p class="hint">Unrated recipes are hidden while a minimum rating is selected.</p>
+    </form>
+    <p id="results-count" class="results-count" aria-live="polite">10 recipes</p>
+    <div id="recipe-list" class="grid">
+      <article class="card">
+        <a class="card-media" href="recipes/flaky-buttermilk-biscuits/">
+          <img src="assets/images/recipes/flaky-buttermilk-biscuits.svg" alt="Illustration of Flaky Buttermilk Biscuits" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Breads</p>
+          <h2><a href="recipes/flaky-buttermilk-biscuits/">Flaky Buttermilk Biscuits</a></h2>
+          <p class="meta">20 min prep · 15 min cook · Serves 8</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+<article class="card">
+        <a class="card-media" href="recipes/chicken-noodle-soup/">
+          <img src="assets/images/recipes/chicken-noodle-soup.svg" alt="Illustration of Old-Fashioned Chicken Noodle Soup" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Soups</p>
+          <h2><a href="recipes/chicken-noodle-soup/">Old-Fashioned Chicken Noodle Soup</a></h2>
+          <p class="meta">25 min prep · 50 min cook · Serves 6</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+<article class="card">
+        <a class="card-media" href="recipes/deep-dish-apple-pie/">
+          <img src="assets/images/recipes/deep-dish-apple-pie.svg" alt="Illustration of Deep-Dish Apple Pie" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Desserts</p>
+          <h2><a href="recipes/deep-dish-apple-pie/">Deep-Dish Apple Pie</a></h2>
+          <p class="meta">40 min prep · 55 min cook · Serves 8</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+<article class="card">
+        <a class="card-media" href="recipes/sunday-pot-roast/">
+          <img src="assets/images/recipes/sunday-pot-roast.svg" alt="Illustration of Sunday Pot Roast" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Mains</p>
+          <h2><a href="recipes/sunday-pot-roast/">Sunday Pot Roast</a></h2>
+          <p class="meta">25 min prep · 3 hr cook · Serves 6</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+<article class="card">
+        <a class="card-media" href="recipes/skillet-creamed-corn/">
+          <img src="assets/images/recipes/skillet-creamed-corn.svg" alt="Illustration of Skillet Creamed Corn" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Sides</p>
+          <h2><a href="recipes/skillet-creamed-corn/">Skillet Creamed Corn</a></h2>
+          <p class="meta">10 min prep · 20 min cook · Serves 6</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+<article class="card">
+        <a class="card-media" href="recipes/fluffy-breakfast-pancakes/">
+          <img src="assets/images/recipes/fluffy-breakfast-pancakes.svg" alt="Illustration of Fluffy Breakfast Pancakes" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Breakfast</p>
+          <h2><a href="recipes/fluffy-breakfast-pancakes/">Fluffy Breakfast Pancakes</a></h2>
+          <p class="meta">10 min prep · 15 min cook · Serves 4</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+<article class="card">
+        <a class="card-media" href="recipes/holiday-cut-out-cookies/">
+          <img src="assets/images/recipes/holiday-cut-out-cookies.svg" alt="Illustration of Holiday Cut-Out Sugar Cookies" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Holidays</p>
+          <h2><a href="recipes/holiday-cut-out-cookies/">Holiday Cut-Out Sugar Cookies</a></h2>
+          <p class="meta">25 min prep · 10 min cook · Serves 24</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+<article class="card">
+        <a class="card-media" href="recipes/brown-sugar-banana-bread/">
+          <img src="assets/images/recipes/brown-sugar-banana-bread.svg" alt="Illustration of Brown Sugar Banana Bread" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Breads</p>
+          <h2><a href="recipes/brown-sugar-banana-bread/">Brown Sugar Banana Bread</a></h2>
+          <p class="meta">15 min prep · 55 min cook · Serves 10</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+<article class="card">
+        <a class="card-media" href="recipes/family-style-meatloaf/">
+          <img src="assets/images/recipes/family-style-meatloaf.svg" alt="Illustration of Family-Style Meatloaf" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Mains</p>
+          <h2><a href="recipes/family-style-meatloaf/">Family-Style Meatloaf</a></h2>
+          <p class="meta">20 min prep · 1 hr cook · Serves 6</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+<article class="card">
+        <a class="card-media" href="recipes/cast-iron-peach-cobbler/">
+          <img src="assets/images/recipes/cast-iron-peach-cobbler.svg" alt="Illustration of Cast-Iron Peach Cobbler" width="800" height="520">
+          <span class="badge">Sample recipe</span>
+        </a>
+        <div class="card-body">
+          <p class="eyebrow">Desserts</p>
+          <h2><a href="recipes/cast-iron-peach-cobbler/">Cast-Iron Peach Cobbler</a></h2>
+          <p class="meta">20 min prep · 40 min cook · Serves 8</p>
+          <p class="meta">No ratings yet · No favorites yet</p>
+        </div>
+      </article>
+    </div>
+    <section class="shop-feature" aria-labelledby="shop-feature-title">
+      <p class="status-pill">Opening soon</p>
+      <h2 id="shop-feature-title">Granny's Kitchen Shop</h2>
+      <p>Blank 4×6 recipe cards, a box to keep them in, a gift set, and The Granny Recipes Book — a 200-page spiral-bound cookbook as a PDF download or a mailed hardcopy.</p>
+      <p class="note">Prices are not final, and nothing is for sale until checkout is turned on.</p>
+      <div class="feature-grid">
+        <a href="shop/recipe-cards/"><img src="assets/images/shop/recipe-cards.svg" alt="Illustration of recipe cards" width="800" height="520"><span><strong>Recipe card packs</strong><br>4×6 cards, packs of 25 and 50</span></a>
+        <a href="shop/recipe-card-box/"><img src="assets/images/shop/recipe-card-box.svg" alt="Illustration of a recipe card box" width="800" height="520"><span><strong>Recipe card box</strong><br>A lidded box for 4×6 cards</span></a>
+        <a href="shop/gift-set/"><img src="assets/images/shop/gift-set.svg" alt="Illustration of a gift set" width="800" height="520"><span><strong>Gift set</strong><br>The box plus a pack of cards</span></a>
+        <a href="shop/cookbook/"><img src="assets/images/shop/cookbook.svg" alt="Illustration of a spiral-bound cookbook" width="800" height="520"><span><strong>The Granny Recipes Book</strong><br>200 pages, PDF or mailed hardcopy</span></a>
+      </div>
+      <p><a class="button" href="shop/">Visit the shop</a></p>
+    </section>
+  </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="shop/">Shop</a>
+        <a href="guidelines.html">Community guidelines</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <p id="mode-note"></p>
+      <p>Recipes are home cooking notes, not professional food-safety advice. Shop prices are placeholders until the shop opens.</p>
+    </div>
+  </footer>
+  <script src="config.js"></script>
+  <script src="assets/js/shop-config.js"></script>
+  <script type="module" src="assets/js/boot.js"></script>
+</body>
+</html>

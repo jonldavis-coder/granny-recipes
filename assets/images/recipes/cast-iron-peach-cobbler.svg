@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Cast-iron peach cobbler</title>
+  <desc id="desc">Illustration of peach cobbler in a round skillet.</desc>
+  <rect width="800" height="520" rx="28" fill="#f6e6d0"/>
+  <rect y="330" width="800" height="190" fill="#e7c79a"/>
+  <ellipse cx="400" cy="360" rx="250" ry="28" fill="#d7b184"/>
+  <ellipse cx="400" cy="310" rx="170" ry="46" fill="#3f3b38"/>
+     <ellipse cx="400" cy="280" rx="145" ry="60" fill="#f0b15c"/>
+     <circle cx="340" cy="250" r="28" fill="#f6d59a" stroke="#e0b15a"/>
+     <circle cx="410" cy="236" r="30" fill="#f6d59a" stroke="#e0b15a"/>
+     <circle cx="470" cy="258" r="26" fill="#f6d59a" stroke="#e0b15a"/>
+     <path d="M360 250c10 8 16 8 24 0M430 236c10 8 16 8 24 0" fill="none" stroke="#e07a3d" stroke-width="4"/>
+</svg>

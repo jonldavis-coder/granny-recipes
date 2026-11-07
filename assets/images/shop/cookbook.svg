@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">The Granny Recipes Book</title>
+  <desc id="desc">Illustration of a spiral-bound cookbook and a wooden spoon.</desc>
+  <rect width="800" height="520" rx="28" fill="#f6e6d0"/>
+  <rect y="330" width="800" height="190" fill="#e7c79a"/>
+  <ellipse cx="400" cy="360" rx="250" ry="28" fill="#d7b184"/>
+  <rect x="230" y="140" width="300" height="250" rx="12" fill="#fffaf3" stroke="#c47d32" stroke-width="6"/>
+     <circle cx="230" cy="165" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/><circle cx="230" cy="187" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/><circle cx="230" cy="209" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/><circle cx="230" cy="231" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/><circle cx="230" cy="253" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/><circle cx="230" cy="275" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/><circle cx="230" cy="297" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/><circle cx="230" cy="319" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/><circle cx="230" cy="341" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/><circle cx="230" cy="363" r="7" fill="none" stroke="#8d5a32" stroke-width="3"/>
+     <path d="M270 190h210M270 230h180M270 270h200" stroke="#e7b8b0" stroke-width="4"/>
+     <rect x="560" y="160" width="16" height="150" rx="8" fill="#c4894e"/>
+     <ellipse cx="568" cy="330" rx="28" ry="36" fill="#e0b07a"/>
+</svg>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/granny-recipes/">
+  <script>document.documentElement.classList.remove("no-js");</script>
+  <title>Post a recipe · Granny Recipes</title>
+  <meta name="description" content="Share a recipe: title, story, photo, times, servings, ingredients, and steps.">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="robots" content="noindex">
+  
+  
+  
+</head>
+<body data-page="post">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#8d3f2a"/>
+          <ellipse cx="32" cy="40" rx="18" ry="8" fill="#f3eee4"/>
+          <path d="M18 38c2-10 8-16 14-16s12 6 14 16" fill="#f6d7a2" stroke="#6f2f1e" stroke-width="2"/>
+          <circle cx="32" cy="24" r="3" fill="#6f2f1e"/>
+        </svg>
+        <span>Granny Recipes</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary">
+          <a href="index.html">Recipes</a>
+          <a href="shop/">Shop</a>
+          <a href="post.html" aria-current="page">Post a recipe</a>
+          <a href="about.html">About</a>
+          <a href="guidelines.html">Guidelines</a>
+      </nav>
+      <div id="auth-slot"></div>
+    </div>
+  </header>
+  <p id="demo-banner" class="demo-banner" role="status" hidden></p>
+  <noscript>
+    <p class="demo-banner">JavaScript is off, so posting, search, comments, hearts, and ratings are unavailable. You can still read the sample recipes and the shop notes.</p>
+  </noscript>
+  <div id="preview-bar" hidden></div>
+  <main id="content" tabindex="-1">
+    <div class="wrap">
+    <h1>Post a recipe</h1>
+    <p class="lede">Write it the way you would on a card: a clear title, a list, and numbered steps.</p>
+    <p id="post-auth-note" class="note" hidden></p>
+    <form id="post-form" class="form-card">
+      <label for="title">Title</label>
+      <input id="title" name="title" required maxlength="120" autocomplete="off">
+      <label for="story">Granny's name or a short story (optional)</label>
+      <textarea id="story" name="story" maxlength="2000" rows="4" placeholder="A Sunday soup that stayed warm on the stove."></textarea>
+      <label for="photo">Photo (optional)</label>
+      <input id="photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
+      <img id="photo-preview" class="preview-img" alt="" hidden>
+      <label for="prep">Prep time (minutes)</label>
+      <input id="prep" name="prep" type="number" min="0" max="1440" step="1" value="15" required inputmode="numeric">
+      <label for="cook">Cook time (minutes)</label>
+      <input id="cook" name="cook" type="number" min="0" max="1440" step="1" value="30" required inputmode="numeric">
+      <label for="servings">Servings</label>
+      <input id="servings" name="servings" type="number" min="1" max="100" step="1" value="4" required inputmode="numeric">
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="">Choose a category</option>
+        <option value="Breakfast">Breakfast</option>
+            <option value="Mains">Mains</option>
+            <option value="Sides">Sides</option>
+            <option value="Soups">Soups</option>
+            <option value="Breads">Breads</option>
+            <option value="Desserts">Desserts</option>
+            <option value="Holidays">Holidays</option>
+      </select>
+      <div class="repeater">
+        <div class="action-row">
+          <h2 id="ing-heading">Ingredients</h2>
+          <button type="button" class="add-row button-quiet">Add ingredient</button>
+        </div>
+        <ul id="ingredients" class="rows" aria-labelledby="ing-heading">
+          <li>
+            <label class="sr-only" for="ingredient-1">Ingredient 1</label>
+            <input id="ingredient-1" name="ingredient" type="text" required maxlength="200" placeholder="2 cups flour">
+            <button type="button" class="button-quiet remove-row">Remove</button>
+          </li>
+        </ul>
+      </div>
+      <div class="repeater">
+        <div class="action-row">
+          <h2 id="step-heading">Steps</h2>
+          <button type="button" class="add-row button-quiet">Add step</button>
+        </div>
+        <ul id="steps" class="rows" aria-labelledby="step-heading">
+          <li>
+            <label class="sr-only" for="step-1">Step 1</label>
+            <textarea id="step-1" name="step" required maxlength="1000" rows="3" placeholder="Heat the oven."></textarea>
+            <button type="button" class="button-quiet remove-row">Remove</button>
+          </li>
+        </ul>
+      </div>
+      <p class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></p>
+      <button type="submit">Post recipe</button>
+      <p id="post-error" class="form-error" role="alert"></p>
+    </form>
+  </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="shop/">Shop</a>
+        <a href="guidelines.html">Community guidelines</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <p id="mode-note"></p>
+      <p>Recipes are home cooking notes, not professional food-safety advice. Shop prices are placeholders until the shop opens.</p>
+    </div>
+  </footer>
+  <script src="config.js"></script>
+  <script src="assets/js/shop-config.js"></script>
+  <script type="module" src="assets/js/boot.js"></script>
+</body>
+</html>

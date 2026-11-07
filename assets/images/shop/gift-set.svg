@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Gift set</title>
+  <desc id="desc">Illustration of a recipe card box tied with a ribbon, with cards beside it.</desc>
+  <rect width="800" height="520" rx="28" fill="#f6e6d0"/>
+  <rect y="330" width="800" height="190" fill="#e7c79a"/>
+  <ellipse cx="400" cy="360" rx="250" ry="28" fill="#d7b184"/>
+  <path d="M250 270h280v120H250z" fill="#c4894e" stroke="#8d5a32" stroke-width="6"/>
+     <path d="M250 270l30-40h280l-30 40z" fill="#e0b07a"/>
+     <path d="M390 180v210M250 320h280" stroke="#8d3f2a" stroke-width="14"/>
+     <path d="M390 190c-30-40-70-20-40 10 30-30 70-10 40-10z" fill="#8d3f2a"/>
+     <rect x="560" y="250" width="90" height="60" rx="6" fill="#fffaf3" stroke="#e4d3c0"/>
+</svg>

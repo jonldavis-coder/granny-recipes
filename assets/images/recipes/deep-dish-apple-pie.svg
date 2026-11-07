@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Deep-dish apple pie</title>
+  <desc id="desc">Illustration of a lattice apple pie.</desc>
+  <rect width="800" height="520" rx="28" fill="#f6e6d0"/>
+  <rect y="330" width="800" height="190" fill="#e7c79a"/>
+  <ellipse cx="400" cy="360" rx="250" ry="28" fill="#d7b184"/>
+  <ellipse cx="400" cy="320" rx="180" ry="46" fill="#c9844a"/>
+     <path d="M230 300c10 70 330 70 340 0" fill="#e0a15d" stroke="#b8743a" stroke-width="6"/>
+     <path d="M250 250h300M250 220h300M280 190l240 110M300 190l220 110M520 190L300 300M500 190L280 300" fill="none" stroke="#f2c48a" stroke-width="10" stroke-linecap="round"/>
+     <circle cx="400" cy="230" r="16" fill="#c4553a"/>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Brown sugar banana bread</title>
+  <desc id="desc">Illustration of a loaf of banana bread beside a banana.</desc>
+  <rect width="800" height="520" rx="28" fill="#f6e6d0"/>
+  <rect y="330" width="800" height="190" fill="#e7c79a"/>
+  <ellipse cx="400" cy="360" rx="250" ry="28" fill="#d7b184"/>
+  <path d="M250 300c20-70 180-70 220 0v40H250z" fill="#c4844a" stroke="#a86a34" stroke-width="6"/>
+     <path d="M270 250c40 20 120 20 180 0" fill="none" stroke="#8d5a2b" stroke-width="6"/>
+     <path d="M520 280c40-10 70 20 60 50-30 8-70-10-60-50z" fill="#f2d34b" stroke="#d2b13a" stroke-width="4"/>
+     <rect x="230" y="330" width="280" height="16" rx="6" fill="#c49a6c"/>
+</svg>
