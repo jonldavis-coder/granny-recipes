@@ -76,6 +76,7 @@ export function page({
         <a href="guidelines.html">Community guidelines</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
+        <a href="disclosure.html">Affiliate &amp; Advertising Disclosure</a>
       </nav>
       <p id="mode-note"></p>
       <p>Recipes are home cooking notes, not professional food-safety advice. Shop prices are placeholders until the shop opens.</p>
@@ -83,6 +84,7 @@ export function page({
   </footer>
   <script src="config.js"></script>
   <script src="assets/js/shop-config.js"></script>
+  <script src="assets/js/ads-config.js"></script>
   <script type="module" src="assets/js/boot.js"></script>
 </body>
 </html>

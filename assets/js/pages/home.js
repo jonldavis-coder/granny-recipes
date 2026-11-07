@@ -2,6 +2,8 @@ import { CATEGORIES } from "../categories.js";
 import { filterRecipes, sortRecipes } from "../lib/filter.js";
 import { formatHearts, formatMinutes, formatRating } from "../lib/format.js";
 import { el } from "../lib/dom.js";
+import { withGridSlots } from "../lib/ads.js";
+import { adsActive, adsConfig, createAdSlot } from "../ads-runtime.js";
 
 export async function init(adapter) {
   const recipes = sortRecipes(await adapter.listRecipes());
@@ -40,7 +42,10 @@ export async function init(adapter) {
       const empty = el("p", { class: "empty" }, "No recipes match. Try another word, or clear the rating filter. Unrated recipes stay hidden while a minimum rating is set.");
       list.append(empty);
     } else {
-      for (const recipe of visible) list.append(card(recipe));
+      const entries = adsActive() ? withGridSlots(visible, adsConfig().gridEvery) : visible.map((item) => ({ kind: "item", item }));
+      for (const entry of entries) {
+        list.append(entry.kind === "ad" ? createAdSlot("browseGrid") : card(entry.item));
+      }
     }
     const noun = visible.length === 1 ? "recipe" : "recipes";
     count.textContent = `${visible.length} ${noun}`;
@@ -67,6 +72,7 @@ export async function init(adapter) {
     writeUrl();
     render();
   });
+  document.addEventListener("granny-ads-remount", render);
 
   render();
 }

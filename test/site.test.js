@@ -13,6 +13,8 @@ import { callToAction, priceLabel, pricesTreatedAsFinal } from "../assets/js/lib
 import { createDemoAdapter } from "../assets/js/demo-adapter.js";
 import { isSupabaseConfigured } from "../assets/js/adapter.js";
 import { SEED } from "../assets/js/seed.js";
+import { consentBannerOn, slotsShouldRender, stepInsertIndex, withGridSlots } from "../assets/js/lib/ads.js";
+import { affiliateRel, disclosureLine, linksForRecipe } from "../assets/js/lib/affiliate.js";
 
 const root = path.resolve(import.meta.dirname, "..");
 
@@ -224,7 +226,49 @@ test("built pages include seo, print hooks, shop, and demo copy", () => {
   assert.equal(fs.existsSync(path.join(root, ".nojekyll")), true);
   assert.match(fs.readFileSync(path.join(root, "sitemap.xml"), "utf8"), /recipes\/flaky-buttermilk-biscuits\//);
   assert.match(fs.readFileSync(path.join(root, "robots.txt"), "utf8"), /sitemap\.xml/);
-  for (const file of ["about.html", "privacy.html", "terms.html", "guidelines.html", "404.html", "post.html", "login.html"]) {
+  for (const file of ["about.html", "privacy.html", "terms.html", "guidelines.html", "disclosure.html", "404.html", "post.html", "login.html"]) {
     assert.equal(fs.existsSync(path.join(root, file)), true);
   }
+  const privacy = fs.readFileSync(path.join(root, "privacy.html"), "utf8");
+  assert.match(privacy, /Advertising cookies/);
+  assert.match(privacy, /Affiliates/);
+  assert.match(home, /disclosure\.html/);
+  assert.match(fs.readFileSync(path.join(root, "disclosure.html"), "utf8"), /Affiliate &amp; Advertising Disclosure|Affiliate & Advertising Disclosure/);
+  const adsTxt = fs.readFileSync(path.join(root, "ads.txt"), "utf8");
+  assert.match(adsTxt, /^#/m);
+  assert.equal(/^\s*google\.com,/m.test(adsTxt), false);
+});
+
+test("ad slots stay empty until a provider is on, and skip print, login, posting, and checkout", () => {
+  const off = { provider: "none" };
+  assert.equal(slotsShouldRender(off, { pageName: "home" }), false);
+  assert.equal(slotsShouldRender(off, { pageName: "recipe", search: "?adsDebug=1" }), true);
+  assert.equal(slotsShouldRender(off, { pageName: "recipe", search: "?adsDebug=1", printing: true }), false);
+  for (const pageName of ["post", "auth", "thanks", "shop"]) {
+    assert.equal(slotsShouldRender(off, { pageName, search: "?adsDebug=1" }), false);
+  }
+  assert.equal(consentBannerOn(off), false);
+  assert.equal(consentBannerOn({ provider: "adsense" }), true);
+  assert.equal(stepInsertIndex(5, 6), -1);
+  assert.equal(stepInsertIndex(7, 6), 3);
+  const grid = withGridSlots([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6);
+  assert.equal(grid.filter((entry) => entry.kind === "ad").length, 1);
+  assert.equal(grid[6].kind, "ad");
+});
+
+test("affiliate links are sponsored and disclosed only when a recipe uses them", () => {
+  assert.equal(affiliateRel(), "sponsored nofollow");
+  const config = {
+    affiliates: {
+      enabled: true,
+      disclosure: "Affiliate disclosure.",
+      links: [{ href: "https://example.com/pan", label: "Pan", recipes: ["cast-iron-peach-cobbler"] }]
+    }
+  };
+  const used = linksForRecipe({ slug: "cast-iron-peach-cobbler" }, config);
+  assert.equal(used[0].rel, "sponsored nofollow");
+  assert.equal(disclosureLine(config, used), "Affiliate disclosure.");
+  assert.equal(linksForRecipe({ slug: "sunday-pot-roast" }, config).length, 0);
+  assert.equal(disclosureLine(config, []), "");
+  assert.equal(linksForRecipe({ slug: "cast-iron-peach-cobbler" }, { affiliates: { enabled: false, links: config.affiliates.links } }).length, 0);
 });

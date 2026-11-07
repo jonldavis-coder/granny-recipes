@@ -60,7 +60,11 @@
     <h2>Shop</h2>
     <p>"Coming soon / Notify me" opens your email app with a draft message. Nothing is sent until you send it. If a Stripe Payment Link is added later, card payments are handled by Stripe on Stripe's site. This static site does not receive card numbers. A PDF download linked from the thank-you page is a file on the public site unless you host it somewhere else.</p>
     <h2>Cookies</h2>
-    <p>Demo mode uses localStorage, not a tracking cookie. Supabase Auth stores a session in browser storage. This site does not add an advertising network.</p>
+    <p>Demo mode uses localStorage, not a tracking cookie. Supabase Auth stores a session in browser storage. Advertising is off while the ad provider is set to none, so the advertising-cookie banner stays hidden and no ad script is loaded.</p>
+    <h2>Advertising cookies</h2>
+    <p>If the site owner later sets the ad provider to AdSense in <code>assets/js/ads-config.js</code>, a consent banner appears before any advertising cookie is set. Accepting allows the ad script to load. Rejecting keeps the ad slots empty. The choice is stored in this browser under a local key and is not an account setting. Ad slots are kept out of print views, the recipe form, the login page, and shop checkout. See the <a href="disclosure.html">Affiliate &amp; Advertising Disclosure</a>.</p>
+    <h2>Affiliates</h2>
+    <p>A recipe can list affiliate links. Those links use <code>rel="sponsored nofollow"</code>, and the page shows a short disclosure when any are present. The other site may learn that you arrived from Granny Recipes. Affiliate links are optional, off until configured, and are not a sale of your account information.</p>
     <h2>Children</h2>
     <p>The site is not directed at children, and photos of children are not allowed.</p>
   </article>
@@ -73,6 +77,7 @@
         <a href="guidelines.html">Community guidelines</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
+        <a href="disclosure.html">Affiliate &amp; Advertising Disclosure</a>
       </nav>
       <p id="mode-note"></p>
       <p>Recipes are home cooking notes, not professional food-safety advice. Shop prices are placeholders until the shop opens.</p>
@@ -80,6 +85,7 @@
   </footer>
   <script src="config.js"></script>
   <script src="assets/js/shop-config.js"></script>
+  <script src="assets/js/ads-config.js"></script>
   <script type="module" src="assets/js/boot.js"></script>
 </body>
 </html>

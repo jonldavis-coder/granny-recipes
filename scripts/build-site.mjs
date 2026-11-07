@@ -347,7 +347,11 @@ write("privacy.html", page({
     <h2>Shop</h2>
     <p>"Coming soon / Notify me" opens your email app with a draft message. Nothing is sent until you send it. If a Stripe Payment Link is added later, card payments are handled by Stripe on Stripe's site. This static site does not receive card numbers. A PDF download linked from the thank-you page is a file on the public site unless you host it somewhere else.</p>
     <h2>Cookies</h2>
-    <p>Demo mode uses localStorage, not a tracking cookie. Supabase Auth stores a session in browser storage. This site does not add an advertising network.</p>
+    <p>Demo mode uses localStorage, not a tracking cookie. Supabase Auth stores a session in browser storage. Advertising is off while the ad provider is set to none, so the advertising-cookie banner stays hidden and no ad script is loaded.</p>
+    <h2>Advertising cookies</h2>
+    <p>If the site owner later sets the ad provider to AdSense in <code>assets/js/ads-config.js</code>, a consent banner appears before any advertising cookie is set. Accepting allows the ad script to load. Rejecting keeps the ad slots empty. The choice is stored in this browser under a local key and is not an account setting. Ad slots are kept out of print views, the recipe form, the login page, and shop checkout. See the <a href="disclosure.html">Affiliate &amp; Advertising Disclosure</a>.</p>
+    <h2>Affiliates</h2>
+    <p>A recipe can list affiliate links. Those links use <code>rel="sponsored nofollow"</code>, and the page shows a short disclosure when any are present. The other site may learn that you arrived from Granny Recipes. Affiliate links are optional, off until configured, and are not a sale of your account information.</p>
     <h2>Children</h2>
     <p>The site is not directed at children, and photos of children are not allowed.</p>
   </article>`
@@ -485,6 +489,32 @@ for (const id of Object.keys(products)) {
   }));
 }
 
+write("disclosure.html", page({
+  title: "Affiliate & Advertising Disclosure · Granny Recipes",
+  description: "How Granny Recipes would show advertising and affiliate links. Ads are off until a provider is configured.",
+  canonical: `${ORIGIN}/disclosure.html`,
+  main: `<article class="wrap prose">
+    <p class="draft-banner"><strong>Draft.</strong> Advertising is not turned on. This page explains the hooks that are ready, not a live ad program.</p>
+    <h1>Affiliate &amp; Advertising Disclosure</h1>
+    <p>Granny Recipes is a community cookbook. The shelves and the shop can be read without an account. Advertising space is built in, and it is empty.</p>
+    <h2>Advertising</h2>
+    <p>The ad provider in <code>assets/js/ads-config.js</code> is <code>none</code>. Empty slots are not drawn and do not take space. If that provider is later set to AdSense, and a publisher ID and slot IDs are filled in, ads can appear in these places:</p>
+    <ul>
+      <li>Below the recipe introduction</li>
+      <li>Between the steps of a long recipe</li>
+      <li>A sidebar on a wide screen</li>
+      <li>A dismissible bar at the bottom of a phone</li>
+      <li>In the recipe browse grid, after every sixth card</li>
+    </ul>
+    <p>Ads are not placed on the print view, the ingredients shopping list, the post-a-recipe form, the login page, or shop checkout. A consent banner asks before any advertising cookie is set. Until you accept, the ad script is not loaded. You can read the <a href="privacy.html">privacy draft</a> for how that choice is stored.</p>
+    <p>The root <code>ads.txt</code> file is a commented placeholder. It does not name a seller until the owner publishes a real publisher ID.</p>
+    <h2>Affiliates</h2>
+    <p>Affiliate links are off until they are listed in the same config file. When a recipe uses one, the link is marked <code>rel="sponsored nofollow"</code> and the page says that a purchase through it may earn this site a commission, at no extra cost to you. Sample recipes do not include affiliate links.</p>
+    <h2>The shop</h2>
+    <p><a href="shop/">Granny's Kitchen Shop</a> is opening soon. Its prices are placeholders. Checkout, when it exists, is handled by Stripe and is not an ad slot.</p>
+  </article>`
+}));
+
 write("shop/thank-you.html", page({
   title: "Thank you · Granny's Kitchen Shop",
   description: "The page buyers return to after checkout, including the PDF download when it is published.",
@@ -499,6 +529,7 @@ const urls = [
   `${ORIGIN}/privacy.html`,
   `${ORIGIN}/terms.html`,
   `${ORIGIN}/guidelines.html`,
+  `${ORIGIN}/disclosure.html`,
   `${ORIGIN}/shop/`,
   `${ORIGIN}/shop/recipe-cards/`,
   `${ORIGIN}/shop/recipe-card-box/`,

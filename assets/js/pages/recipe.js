@@ -2,6 +2,7 @@ import { formatHearts, formatMinutes, formatRating, formatWhen, isoDuration } fr
 import { safeJsonLd } from "../lib/escape.js";
 import { armForm, readFormMeta } from "../lib/human.js";
 import { el, friendlyError } from "../lib/dom.js";
+import { mountAffiliateDisclosure, mountRecipeAds, mountStickyFooter } from "../ads-runtime.js";
 const REPORT_REASONS = ["Spam", "Harassment", "Dangerous instructions", "Not a recipe", "Other"];
 
 function herePath() {
@@ -34,6 +35,13 @@ export async function init(adapter) {
   mountActions(adapter, recipe, session);
   await mountComments(adapter, recipe, session);
   applyPreview();
+  mountRecipeAds(root);
+  mountAffiliateDisclosure(root, recipe);
+  document.addEventListener("granny-ads-remount", () => {
+    mountRecipeAds(root);
+    mountAffiliateDisclosure(root, recipe);
+    mountStickyFooter();
+  });
 }
 
 function renderMissing(root) {

@@ -1,5 +1,6 @@
 import { getAdapter } from "./adapter.js";
 import { mountChrome } from "./chrome.js";
+import { startAds } from "./ads-runtime.js";
 
 const pages = {
   home: () => import("./pages/home.js"),
@@ -15,9 +16,11 @@ async function start() {
   const adapter = await getAdapter();
   await mountChrome(adapter);
   const name = document.body.dataset.page || "static";
-  if (!pages[name]) return;
-  const mod = await pages[name]();
-  await mod.init(adapter);
+  if (pages[name]) {
+    const mod = await pages[name]();
+    await mod.init(adapter);
+  }
+  startAds();
 }
 
 start().catch((error) => {

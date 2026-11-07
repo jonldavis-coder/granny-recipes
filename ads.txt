@@ -1,0 +1,8 @@
+# ads.txt — Granny Recipes
+# Advertising is off. The site provider in assets/js/ads-config.js is "none".
+# This file is a placeholder. Nothing here authorizes a seller.
+# When you turn on AdSense, uncomment the next line and replace the publisher ID
+# with the real ca-pub value from ads-config.js. f08c47fec0942fa0 is Google's
+# certification authority ID.
+#
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

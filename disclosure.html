@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/granny-recipes/">
+  <script>document.documentElement.classList.remove("no-js");</script>
+  <title>Affiliate &amp; Advertising Disclosure · Granny Recipes</title>
+  <meta name="description" content="How Granny Recipes would show advertising and affiliate links. Ads are off until a provider is configured.">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <link rel="canonical" href="https://jonldavis-coder.github.io/granny-recipes/disclosure.html">
+  
+  
+</head>
+<body data-page="static">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#8d3f2a"/>
+          <ellipse cx="32" cy="40" rx="18" ry="8" fill="#f3eee4"/>
+          <path d="M18 38c2-10 8-16 14-16s12 6 14 16" fill="#f6d7a2" stroke="#6f2f1e" stroke-width="2"/>
+          <circle cx="32" cy="24" r="3" fill="#6f2f1e"/>
+        </svg>
+        <span>Granny Recipes</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary">
+          <a href="index.html">Recipes</a>
+          <a href="shop/">Shop</a>
+          <a href="post.html">Post a recipe</a>
+          <a href="about.html">About</a>
+          <a href="guidelines.html">Guidelines</a>
+      </nav>
+      <div id="auth-slot"></div>
+    </div>
+  </header>
+  <p id="demo-banner" class="demo-banner" role="status" hidden></p>
+  <noscript>
+    <p class="demo-banner">JavaScript is off, so posting, search, comments, hearts, and ratings are unavailable. You can still read the sample recipes and the shop notes.</p>
+  </noscript>
+  <div id="preview-bar" hidden></div>
+  <main id="content" tabindex="-1">
+    <article class="wrap prose">
+    <p class="draft-banner"><strong>Draft.</strong> Advertising is not turned on. This page explains the hooks that are ready, not a live ad program.</p>
+    <h1>Affiliate &amp; Advertising Disclosure</h1>
+    <p>Granny Recipes is a community cookbook. The shelves and the shop can be read without an account. Advertising space is built in, and it is empty.</p>
+    <h2>Advertising</h2>
+    <p>The ad provider in <code>assets/js/ads-config.js</code> is <code>none</code>. Empty slots are not drawn and do not take space. If that provider is later set to AdSense, and a publisher ID and slot IDs are filled in, ads can appear in these places:</p>
+    <ul>
+      <li>Below the recipe introduction</li>
+      <li>Between the steps of a long recipe</li>
+      <li>A sidebar on a wide screen</li>
+      <li>A dismissible bar at the bottom of a phone</li>
+      <li>In the recipe browse grid, after every sixth card</li>
+    </ul>
+    <p>Ads are not placed on the print view, the ingredients shopping list, the post-a-recipe form, the login page, or shop checkout. A consent banner asks before any advertising cookie is set. Until you accept, the ad script is not loaded. You can read the <a href="privacy.html">privacy draft</a> for how that choice is stored.</p>
+    <p>The root <code>ads.txt</code> file is a commented placeholder. It does not name a seller until the owner publishes a real publisher ID.</p>
+    <h2>Affiliates</h2>
+    <p>Affiliate links are off until they are listed in the same config file. When a recipe uses one, the link is marked <code>rel="sponsored nofollow"</code> and the page says that a purchase through it may earn this site a commission, at no extra cost to you. Sample recipes do not include affiliate links.</p>
+    <h2>The shop</h2>
+    <p><a href="shop/">Granny's Kitchen Shop</a> is opening soon. Its prices are placeholders. Checkout, when it exists, is handled by Stripe and is not an ad slot.</p>
+  </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="shop/">Shop</a>
+        <a href="guidelines.html">Community guidelines</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosure.html">Affiliate &amp; Advertising Disclosure</a>
+      </nav>
+      <p id="mode-note"></p>
+      <p>Recipes are home cooking notes, not professional food-safety advice. Shop prices are placeholders until the shop opens.</p>
+    </div>
+  </footer>
+  <script src="config.js"></script>
+  <script src="assets/js/shop-config.js"></script>
+  <script src="assets/js/ads-config.js"></script>
+  <script type="module" src="assets/js/boot.js"></script>
+</body>
+</html>

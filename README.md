@@ -118,6 +118,16 @@ The hardcopy format uses the same thank-you page with `format=hardcopy`. This si
 
 Mailed cards, the box, and the gift set work the same way: paste a Payment Link when you are ready, and pack the order yourself.
 
+## Advertising
+
+Ads are off. [`assets/js/ads-config.js`](assets/js/ads-config.js) sets `provider` to `none`, so the slot containers are not rendered and do not reserve height. The cookie-consent banner stays off until that provider changes. [`ads.txt`](ads.txt) is a commented placeholder.
+
+Slots, when a provider is on: below the recipe intro, between steps on long recipes (6 steps or more), a desktop sidebar, a dismissible mobile footer, and one browse-grid slot after every 6 cards. They never appear on the print view, the ingredients list print, the post form, the login page, or shop checkout (including the thank-you page).
+
+To preview empty positions, open a page with `?adsDebug=1`. Outlines show, and no ad script loads. To turn ads on later, set `provider` to `"adsense"`, fill `adsense.publisherId` (`ca-pub-…`) and the slot IDs, uncomment the line in `ads.txt`, and use the real publisher ID there. Visitors then see the consent banner before any ad script loads.
+
+Affiliate links are also off. Add them under `affiliates.links` with `enabled: true`. The helper writes `rel="sponsored nofollow"` and a disclosure line only on recipes that use a link. The footer links to the [Affiliate & Advertising Disclosure](disclosure.html).
+
 ## Rebuild pages
 
 Recipe HTML, the sitemap, and illustrations are generated:
